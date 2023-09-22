@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Map3D">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Gray_DarkGray1">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:elevation="0.5dp"
+            android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+            app:title="@string/view_3D"
+            app:titleTextAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            app:menu="@menu/function_app_bar"
+            app:navigationIcon="@drawable/back"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="72dp"
+        android:rowCount="3"
+        android:columnCount="3"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <Button
+            android:id="@+id/button_campus"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Tổng quát"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            android:onClick="campus_3D"
+            style="@style/myCustomOutlinedButton"/>
+
+        <Button
+            android:id="@+id/button_buildingA"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="Nhà A"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            android:onClick="buildingA_3D"
+            style="@style/myCustomOutlinedButton"/>
+
+        <Button
+            android:id="@+id/button_buildingB"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Nhà B"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            android:onClick="buildingB_3D"
+            style="@style/myCustomOutlinedButton"/>
+
+        <Button
+            android:id="@+id/button_buildingC"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Nhà C"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            android:onClick="buildingC_3D"
+            style="@style/myCustomOutlinedButton"/>
+
+        <Button
+            android:id="@+id/button_buildingD"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="48dp"
+            android:text="Nhà D"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            android:onClick="buildingD_3D"
+            style="@style/myCustomOutlinedButton"/>
+
+        <Button
+            android:id="@+id/button_buildingE"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Nhà E"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            android:onClick="buildingE_3D"
+            style="@style/myCustomOutlinedButton"/>
+
+        <Button
+            android:id="@+id/button_buildingF"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Nhà F"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            android:onClick="buildingF_3D"
+            style="@style/myCustomOutlinedButton"/>
+
+        <Button
+            android:id="@+id/button_buildingH"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="48dp"
+            android:text="Nhà H"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            android:onClick="buildingH_3D"
+            style="@style/myCustomOutlinedButton"/>
+
+        <Button
+            android:id="@+id/button_buildingI"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Nhà I"
+            android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+            android:textSize="38sp"
+            android:textColor="@color/black"
+            android:onClick="buildingI_3D"
+            style="@style/myCustomOutlinedButton"/>
+
+    </GridLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

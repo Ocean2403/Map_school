@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/White"
+    android:elevation="1dp"
+    app:cardCornerRadius="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/White_Wheat"
+            app:cardCornerRadius="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:gravity="center|fill"
+                android:paddingStart="8dp"
+                android:text="Đánh giá về phòng học"
+                android:textSize="36sp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/dept_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="8dp"
+            android:padding="6dp"
+            android:textSize="24sp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Đánh giá"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:inputType="text|textNoSuggestions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_gravity="end"
+            android:paddingEnd="12dp">
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hủy"
+                android:textSize="18sp"
+                android:textColor="@color/Black"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/cancel"
+                android:text="Gửi"
+                android:textSize="18sp"
+                android:textColor="@color/Black"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/datetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textAlignment="textEnd"
+            android:textSize="12sp"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

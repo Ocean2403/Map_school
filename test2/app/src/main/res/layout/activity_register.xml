@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login6"
+    tools:context=".Register">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/White_transparent_white_hex_8"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="4dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Register_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginLeft="24dp"
+                android:text="Đăng ký"
+                android:textSize="36sp"
+                android:textColor="@color/Cyber_Yellow_mix_Royal_Dark_Blue"
+                android:fontFamily="@font/segoe_ui_bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Register_User_field"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Register_TextView"
+                android:layout_marginTop="36dp"
+                android:hint="Tên người dùng"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/user">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Register_User"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters|textPersonName|textNoSuggestions"
+                    android:fontFamily="@font/segoe_ui"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Register_Email_field"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Register_User_field"
+                android:layout_marginTop="12dp"
+                android:hint="Email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/email2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Register_Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/segoe_ui"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Register_Password_field"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Register_Email_field"
+                android:layout_marginTop="12dp"
+                android:hint="Mật khẩu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/password2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Register_Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="25"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/segoe_ui"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/Register_Button"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Register_Password_field"
+                android:layout_marginTop="36dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/Cyber_Yellow_mix_Royal_Dark_Blue"
+                android:text="Đăng ký"
+                android:textSize="30sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:onClick="Register_at_register"
+                style="@style/myCustomContainedButton"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Register_Button"
+                android:layout_alignRight="@+id/Register_Button"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/Black"
+                android:background="@color/Black_transparent_black_hex_3"
+                android:text="Đã có tài khoản"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:onClick="Login_at_register"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

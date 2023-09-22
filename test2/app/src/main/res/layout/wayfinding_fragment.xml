@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Search">
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/Gray_DarkGray1">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/app_bar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:elevation="1dp"-->
+<!--            android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"-->
+<!--            app:title="@string/view_direction"-->
+<!--            app:titleTextAppearance="@style/TextAppearance.Material3.HeadlineLarge"-->
+<!--            app:navigationIcon="@drawable/back"-->
+<!--            app:menu="@menu/function_app_bar2" />-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <AutoCompleteTextView
+                    android:id="@+id/actv"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:completionThreshold="1"
+                    android:hint="Search"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:padding="16dp">
+
+                </AutoCompleteTextView>
+                <ImageButton
+                    android:id="@+id/clear_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/actv"
+                    android:src="@drawable/clear">
+
+                </ImageButton>
+                <ImageButton
+                    android:id="@+id/search_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/search"
+                    >
+
+                </ImageButton>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/actv2"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:completionThreshold="1"
+                    android:hint="Search"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:padding="16dp">
+
+                </AutoCompleteTextView>
+                <ImageButton
+                    android:id="@+id/clear_btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/actv"
+                    android:src="@drawable/clear">
+
+                </ImageButton>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <!--<fragment-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:id="@+id/frg"-->
+    <!--    ></fragment>-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/hình2"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/chiduong0"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Chỉ đường: "
+            android:textSize="24sp"
+            android:fontFamily="@font/segoe_ui"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hình2" />
+
+        <TextView
+            android:id="@+id/chiduong"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            android:textSize="24sp"
+            android:fontFamily="@font/segoe_ui"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chiduong0"
+            app:layout_constraintTop_toBottomOf="@+id/hình2" />
+
+        <TextView
+            android:id="@+id/mota0"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Mô tả: "
+            android:textSize="24sp"
+            android:fontFamily="@font/segoe_ui"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/mota"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chiduong" />
+
+        <TextView
+            android:id="@+id/mota"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="start"
+            android:textSize="24sp"
+            android:fontFamily="@font/segoe_ui"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mota0"
+            app:layout_constraintTop_toBottomOf="@+id/chiduong" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
